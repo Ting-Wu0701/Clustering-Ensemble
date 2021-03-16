@@ -1,6 +1,7 @@
 """
     我试一下能不能push到你的repo里
 """
+import Parameters as Para
 import pandas as pd
 import math
 import numpy as np
@@ -15,8 +16,8 @@ from sklearn import metrics
 from sklearn.cluster import MeanShift, estimate_bandwidth
 
 # 读取数据
-filepath = "KaggleImbalanced.csv"
-df = pd.read_csv(filepath)
+
+df = pd.read_csv(Para.filepath)
 feats = [x for x in df.columns if x != 'ProtocolName']
 X = df[feats]
 # X = X[1:100]

@@ -1,3 +1,4 @@
+import Parameters as Para
 import numpy as np
 import pandas as pd
 from pandas import DataFrame, Series
@@ -7,8 +8,8 @@ from sklearn.cluster import spectral_clustering
 from sklearn import metrics
 from sklearn.cluster import MeanShift, estimate_bandwidth
 # 读取数据
-filepath = "KaggleImbalanced.csv"
-df = pd.read_csv(filepath)
+
+df = pd.read_csv(Para.filepath)
 feats = [x for x in df.columns if x != 'ProtocolName']
 X = df[feats]
 X = X[1:100]
