@@ -7,23 +7,18 @@ from sklearn.preprocessing import StandardScaler
 import pandas as pd
 """
 该算法目前效果十分不好
-DBSCAN（Density-Based Spatial Clustering of Applications with Noise,具有噪声的基于密度的聚类方法）是一种基于密度的空间聚类算法。
-该算法将具有足够密度的区域划分为簇(即要求聚类空间中的一定区域内所包含对象的数目不小于某一给定阈值)，并在具有噪声的空间数据库中发现任意形状的簇，
+DBSCAN（Density-Based Spatial Clustering of Applications with Noise,
+具有噪声的基于密度的聚类方法）是一种基于密度的空间聚类算法。
+该算法将具有足够密度的区域划分为簇(即要求聚类空间中的一定区域内所包含对象的数目不小于某一给定阈值)，
+并在具有噪声的空间数据库中发现任意形状的簇，
 它将簇定义为密度相连的点的最大集合。
     a）sklearn.cluster.DBSCAN
-
     b）主要参数（详细参数）
-
-    eps:两个样本之间的最大距离，即扫描半径
-
-    min_samples ：作为核心点的话邻域(即以其为圆心，eps为半径的圆，含圆上的点)中的最小样本数(包括点本身)。
-
+        eps:两个样本之间的最大距离，即扫描半径
+        min_samples ：作为核心点的话邻域(即以其为圆心，eps为半径的圆，含圆上的点)中的最小样本数(包括点本身)。
     c）主要属性
-
-    core_sample_indices_:核心样本指数。
-
-    labels_:数据集中每个点的集合标签给,噪声点标签为-1。
-
+        core_sample_indices_:核心样本指数。
+        labels_:数据集中每个点的集合标签给,噪声点标签为-1。
 """
 
 filepath = "KaggleImbalanced.csv"
